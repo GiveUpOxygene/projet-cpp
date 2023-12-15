@@ -3,9 +3,10 @@
 #include "../Character/Character.hpp"
 #include "../Enemy/Enemy.hpp"
 
-class Cyclist : public Enemy{
+
+class Pieton : public Enemy{
     public:
-        Cyclist();
-        ~Cyclist();
+        Pieton();
+        ~Pieton();
     private:
 };

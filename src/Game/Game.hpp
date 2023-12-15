@@ -10,3 +10,14 @@
 #include <array>    //Safer, easier to use fixed size arrays to hold textures
 #include <ctime>    //time(NULL) for Rand Seed
 #include <cstdlib>  //Rand
+#include <map>
+
+class Game{
+    public:
+        Game();
+        ~Game();
+    
+    private:
+    // use a map to count instances of entities
+    map<Entity>
+}

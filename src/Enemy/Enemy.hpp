@@ -1,6 +1,9 @@
 #pragma once
 #include <iostream>
-class Enemy{
+#include "../Character/Character.hpp"
+
+
+class Enemy : public Character{
     public:
         Enemy();
         ~Enemy();
