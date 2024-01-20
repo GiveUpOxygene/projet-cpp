@@ -1,0 +1,11 @@
+#Resolution
+#Options: 600x800, 768x1024, 864x1152, 960x1280
+resolution 864x1152
+
+#vsync
+#Options: on, off
+vsync on
+
+#Difficulty
+#Options: easy, normal, hard
+difficulty normal

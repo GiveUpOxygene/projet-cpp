@@ -1,0 +1,3 @@
+/home/user/S7 info/cpp/projet/CMakeFiles/bulletHell.dir
+/home/user/S7 info/cpp/projet/CMakeFiles/edit_cache.dir
+/home/user/S7 info/cpp/projet/CMakeFiles/rebuild_cache.dir
