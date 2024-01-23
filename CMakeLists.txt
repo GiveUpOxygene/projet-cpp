@@ -23,5 +23,5 @@ set(SOURCE_FILES src/bulletHell.cpp
                  src/AudioManager/AudioManager.cpp
                  extlibs/Collision/Collision.cpp)
 
-add_executable(bulletHell ${SOURCE_FILES})
-target_link_libraries(bulletHell -lsfml-graphics -lsfml-system -lsfml-window -lsfml-audio)
+add_executable(valeriePecrage ${SOURCE_FILES})
+target_link_libraries(valeriePecrage -lsfml-graphics -lsfml-system -lsfml-window -lsfml-audio)

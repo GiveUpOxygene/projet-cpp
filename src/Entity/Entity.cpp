@@ -84,6 +84,9 @@ void Entity::initEntityType(EntityTypes type){
         case EntityTypes::bonusGenerator:
         initBonusGenerator();
         break;
+        case EntityTypes::tourist:
+        initTourist();
+        break; 
     }
 }
 
@@ -205,6 +208,21 @@ void Entity::initPecresse(){
     health = 30;
 }
 
+void Entity::initTourist(){
+    addShootingPoint(180, 200);
+    addShootingPoint(253, 125);
+    addShootingPoint(324, 202);
+
+    setMsBetweenFrames(30);
+    setMsBetweenShots(70);
+    dmg = 1;
+
+    setScale(0.18 * scaleMultiplier, 0.18 * scaleMultiplier);
+    setBulletScale(0.1 * scaleMultiplier, 0.1 * scaleMultiplier);
+    entityType = EntityTypes::tourist;
+    health = 30;
+}
+
 
 void Entity::initBaseType(){
     setMsBetweenFrames(40);
@@ -266,6 +284,8 @@ std::string Entity::entityToString(){
     case EntityTypes::bonusGenerator:
         return ("bonusGenerator");
 
+    case EntityTypes::tourist:
+        return ("tourist");
     case EntityTypes::base_type:
     default:
         return ("base_type");

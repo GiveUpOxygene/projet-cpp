@@ -57,18 +57,18 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/user/S7 info/cpp/projet"
+CMAKE_SOURCE_DIR = "/mnt/c/Users/nicos/OneDrive/Bureau/MAIN4/S7 - C++ POO/projet-cpp"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/user/S7 info/cpp/projet"
+CMAKE_BINARY_DIR = "/mnt/c/Users/nicos/OneDrive/Bureau/MAIN4/S7 - C++ POO/projet-cpp"
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/user/S7 info/cpp/projet/CMakeFiles" "/home/user/S7 info/cpp/projet//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/nicos/OneDrive/Bureau/MAIN4/S7 - C++ POO/projet-cpp/CMakeFiles" "/mnt/c/Users/nicos/OneDrive/Bureau/MAIN4/S7 - C++ POO/projet-cpp//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/user/S7 info/cpp/projet/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/nicos/OneDrive/Bureau/MAIN4/S7 - C++ POO/projet-cpp/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named bulletHell
+# Target rules for targets named valeriePecrage
 
 # Build rule for target.
-bulletHell: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bulletHell
-.PHONY : bulletHell
+valeriePecrage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 valeriePecrage
+.PHONY : valeriePecrage
 
 # fast build rule for target.
-bulletHell/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/build
-.PHONY : bulletHell/fast
+valeriePecrage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/build
+.PHONY : valeriePecrage/fast
 
 extlibs/Collision/Collision.o: extlibs/Collision/Collision.cpp.o
 .PHONY : extlibs/Collision/Collision.o
 
 # target to build an object file
 extlibs/Collision/Collision.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/extlibs/Collision/Collision.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/extlibs/Collision/Collision.cpp.o
 .PHONY : extlibs/Collision/Collision.cpp.o
 
 extlibs/Collision/Collision.i: extlibs/Collision/Collision.cpp.i
@@ -142,7 +142,7 @@ extlibs/Collision/Collision.i: extlibs/Collision/Collision.cpp.i
 
 # target to preprocess a source file
 extlibs/Collision/Collision.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/extlibs/Collision/Collision.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/extlibs/Collision/Collision.cpp.i
 .PHONY : extlibs/Collision/Collision.cpp.i
 
 extlibs/Collision/Collision.s: extlibs/Collision/Collision.cpp.s
@@ -150,7 +150,7 @@ extlibs/Collision/Collision.s: extlibs/Collision/Collision.cpp.s
 
 # target to generate assembly for a file
 extlibs/Collision/Collision.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/extlibs/Collision/Collision.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/extlibs/Collision/Collision.cpp.s
 .PHONY : extlibs/Collision/Collision.cpp.s
 
 src/Animation/Animation.o: src/Animation/Animation.cpp.o
@@ -158,7 +158,7 @@ src/Animation/Animation.o: src/Animation/Animation.cpp.o
 
 # target to build an object file
 src/Animation/Animation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Animation/Animation.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Animation/Animation.cpp.o
 .PHONY : src/Animation/Animation.cpp.o
 
 src/Animation/Animation.i: src/Animation/Animation.cpp.i
@@ -166,7 +166,7 @@ src/Animation/Animation.i: src/Animation/Animation.cpp.i
 
 # target to preprocess a source file
 src/Animation/Animation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Animation/Animation.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Animation/Animation.cpp.i
 .PHONY : src/Animation/Animation.cpp.i
 
 src/Animation/Animation.s: src/Animation/Animation.cpp.s
@@ -174,7 +174,7 @@ src/Animation/Animation.s: src/Animation/Animation.cpp.s
 
 # target to generate assembly for a file
 src/Animation/Animation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Animation/Animation.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Animation/Animation.cpp.s
 .PHONY : src/Animation/Animation.cpp.s
 
 src/AudioManager/AudioManager.o: src/AudioManager/AudioManager.cpp.o
@@ -182,7 +182,7 @@ src/AudioManager/AudioManager.o: src/AudioManager/AudioManager.cpp.o
 
 # target to build an object file
 src/AudioManager/AudioManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/AudioManager/AudioManager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/AudioManager/AudioManager.cpp.o
 .PHONY : src/AudioManager/AudioManager.cpp.o
 
 src/AudioManager/AudioManager.i: src/AudioManager/AudioManager.cpp.i
@@ -190,7 +190,7 @@ src/AudioManager/AudioManager.i: src/AudioManager/AudioManager.cpp.i
 
 # target to preprocess a source file
 src/AudioManager/AudioManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/AudioManager/AudioManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/AudioManager/AudioManager.cpp.i
 .PHONY : src/AudioManager/AudioManager.cpp.i
 
 src/AudioManager/AudioManager.s: src/AudioManager/AudioManager.cpp.s
@@ -198,7 +198,7 @@ src/AudioManager/AudioManager.s: src/AudioManager/AudioManager.cpp.s
 
 # target to generate assembly for a file
 src/AudioManager/AudioManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/AudioManager/AudioManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/AudioManager/AudioManager.cpp.s
 .PHONY : src/AudioManager/AudioManager.cpp.s
 
 src/Background/Background.o: src/Background/Background.cpp.o
@@ -206,7 +206,7 @@ src/Background/Background.o: src/Background/Background.cpp.o
 
 # target to build an object file
 src/Background/Background.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Background/Background.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Background/Background.cpp.o
 .PHONY : src/Background/Background.cpp.o
 
 src/Background/Background.i: src/Background/Background.cpp.i
@@ -214,7 +214,7 @@ src/Background/Background.i: src/Background/Background.cpp.i
 
 # target to preprocess a source file
 src/Background/Background.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Background/Background.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Background/Background.cpp.i
 .PHONY : src/Background/Background.cpp.i
 
 src/Background/Background.s: src/Background/Background.cpp.s
@@ -222,7 +222,7 @@ src/Background/Background.s: src/Background/Background.cpp.s
 
 # target to generate assembly for a file
 src/Background/Background.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Background/Background.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Background/Background.cpp.s
 .PHONY : src/Background/Background.cpp.s
 
 src/Bus/Bus.o: src/Bus/Bus.cpp.o
@@ -230,7 +230,7 @@ src/Bus/Bus.o: src/Bus/Bus.cpp.o
 
 # target to build an object file
 src/Bus/Bus.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Bus/Bus.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Bus/Bus.cpp.o
 .PHONY : src/Bus/Bus.cpp.o
 
 src/Bus/Bus.i: src/Bus/Bus.cpp.i
@@ -238,7 +238,7 @@ src/Bus/Bus.i: src/Bus/Bus.cpp.i
 
 # target to preprocess a source file
 src/Bus/Bus.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Bus/Bus.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Bus/Bus.cpp.i
 .PHONY : src/Bus/Bus.cpp.i
 
 src/Bus/Bus.s: src/Bus/Bus.cpp.s
@@ -246,7 +246,7 @@ src/Bus/Bus.s: src/Bus/Bus.cpp.s
 
 # target to generate assembly for a file
 src/Bus/Bus.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Bus/Bus.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Bus/Bus.cpp.s
 .PHONY : src/Bus/Bus.cpp.s
 
 src/Bus/BusListener.o: src/Bus/BusListener.cpp.o
@@ -254,7 +254,7 @@ src/Bus/BusListener.o: src/Bus/BusListener.cpp.o
 
 # target to build an object file
 src/Bus/BusListener.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Bus/BusListener.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Bus/BusListener.cpp.o
 .PHONY : src/Bus/BusListener.cpp.o
 
 src/Bus/BusListener.i: src/Bus/BusListener.cpp.i
@@ -262,7 +262,7 @@ src/Bus/BusListener.i: src/Bus/BusListener.cpp.i
 
 # target to preprocess a source file
 src/Bus/BusListener.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Bus/BusListener.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Bus/BusListener.cpp.i
 .PHONY : src/Bus/BusListener.cpp.i
 
 src/Bus/BusListener.s: src/Bus/BusListener.cpp.s
@@ -270,7 +270,7 @@ src/Bus/BusListener.s: src/Bus/BusListener.cpp.s
 
 # target to generate assembly for a file
 src/Bus/BusListener.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Bus/BusListener.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Bus/BusListener.cpp.s
 .PHONY : src/Bus/BusListener.cpp.s
 
 src/Bus/BusWriter.o: src/Bus/BusWriter.cpp.o
@@ -278,7 +278,7 @@ src/Bus/BusWriter.o: src/Bus/BusWriter.cpp.o
 
 # target to build an object file
 src/Bus/BusWriter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Bus/BusWriter.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Bus/BusWriter.cpp.o
 .PHONY : src/Bus/BusWriter.cpp.o
 
 src/Bus/BusWriter.i: src/Bus/BusWriter.cpp.i
@@ -286,7 +286,7 @@ src/Bus/BusWriter.i: src/Bus/BusWriter.cpp.i
 
 # target to preprocess a source file
 src/Bus/BusWriter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Bus/BusWriter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Bus/BusWriter.cpp.i
 .PHONY : src/Bus/BusWriter.cpp.i
 
 src/Bus/BusWriter.s: src/Bus/BusWriter.cpp.s
@@ -294,7 +294,7 @@ src/Bus/BusWriter.s: src/Bus/BusWriter.cpp.s
 
 # target to generate assembly for a file
 src/Bus/BusWriter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Bus/BusWriter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Bus/BusWriter.cpp.s
 .PHONY : src/Bus/BusWriter.cpp.s
 
 src/Bus/Message.o: src/Bus/Message.cpp.o
@@ -302,7 +302,7 @@ src/Bus/Message.o: src/Bus/Message.cpp.o
 
 # target to build an object file
 src/Bus/Message.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Bus/Message.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Bus/Message.cpp.o
 .PHONY : src/Bus/Message.cpp.o
 
 src/Bus/Message.i: src/Bus/Message.cpp.i
@@ -310,7 +310,7 @@ src/Bus/Message.i: src/Bus/Message.cpp.i
 
 # target to preprocess a source file
 src/Bus/Message.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Bus/Message.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Bus/Message.cpp.i
 .PHONY : src/Bus/Message.cpp.i
 
 src/Bus/Message.s: src/Bus/Message.cpp.s
@@ -318,7 +318,7 @@ src/Bus/Message.s: src/Bus/Message.cpp.s
 
 # target to generate assembly for a file
 src/Bus/Message.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Bus/Message.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Bus/Message.cpp.s
 .PHONY : src/Bus/Message.cpp.s
 
 src/Difficulty/Difficulty.o: src/Difficulty/Difficulty.cpp.o
@@ -326,7 +326,7 @@ src/Difficulty/Difficulty.o: src/Difficulty/Difficulty.cpp.o
 
 # target to build an object file
 src/Difficulty/Difficulty.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Difficulty/Difficulty.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Difficulty/Difficulty.cpp.o
 .PHONY : src/Difficulty/Difficulty.cpp.o
 
 src/Difficulty/Difficulty.i: src/Difficulty/Difficulty.cpp.i
@@ -334,7 +334,7 @@ src/Difficulty/Difficulty.i: src/Difficulty/Difficulty.cpp.i
 
 # target to preprocess a source file
 src/Difficulty/Difficulty.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Difficulty/Difficulty.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Difficulty/Difficulty.cpp.i
 .PHONY : src/Difficulty/Difficulty.cpp.i
 
 src/Difficulty/Difficulty.s: src/Difficulty/Difficulty.cpp.s
@@ -342,7 +342,7 @@ src/Difficulty/Difficulty.s: src/Difficulty/Difficulty.cpp.s
 
 # target to generate assembly for a file
 src/Difficulty/Difficulty.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Difficulty/Difficulty.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Difficulty/Difficulty.cpp.s
 .PHONY : src/Difficulty/Difficulty.cpp.s
 
 src/Effect/Effect.o: src/Effect/Effect.cpp.o
@@ -350,7 +350,7 @@ src/Effect/Effect.o: src/Effect/Effect.cpp.o
 
 # target to build an object file
 src/Effect/Effect.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Effect/Effect.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Effect/Effect.cpp.o
 .PHONY : src/Effect/Effect.cpp.o
 
 src/Effect/Effect.i: src/Effect/Effect.cpp.i
@@ -358,7 +358,7 @@ src/Effect/Effect.i: src/Effect/Effect.cpp.i
 
 # target to preprocess a source file
 src/Effect/Effect.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Effect/Effect.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Effect/Effect.cpp.i
 .PHONY : src/Effect/Effect.cpp.i
 
 src/Effect/Effect.s: src/Effect/Effect.cpp.s
@@ -366,7 +366,7 @@ src/Effect/Effect.s: src/Effect/Effect.cpp.s
 
 # target to generate assembly for a file
 src/Effect/Effect.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Effect/Effect.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Effect/Effect.cpp.s
 .PHONY : src/Effect/Effect.cpp.s
 
 src/Entity/Entity.o: src/Entity/Entity.cpp.o
@@ -374,7 +374,7 @@ src/Entity/Entity.o: src/Entity/Entity.cpp.o
 
 # target to build an object file
 src/Entity/Entity.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Entity/Entity.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Entity/Entity.cpp.o
 .PHONY : src/Entity/Entity.cpp.o
 
 src/Entity/Entity.i: src/Entity/Entity.cpp.i
@@ -382,7 +382,7 @@ src/Entity/Entity.i: src/Entity/Entity.cpp.i
 
 # target to preprocess a source file
 src/Entity/Entity.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Entity/Entity.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Entity/Entity.cpp.i
 .PHONY : src/Entity/Entity.cpp.i
 
 src/Entity/Entity.s: src/Entity/Entity.cpp.s
@@ -390,7 +390,7 @@ src/Entity/Entity.s: src/Entity/Entity.cpp.s
 
 # target to generate assembly for a file
 src/Entity/Entity.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Entity/Entity.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Entity/Entity.cpp.s
 .PHONY : src/Entity/Entity.cpp.s
 
 src/Game/Game.o: src/Game/Game.cpp.o
@@ -398,7 +398,7 @@ src/Game/Game.o: src/Game/Game.cpp.o
 
 # target to build an object file
 src/Game/Game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Game/Game.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Game/Game.cpp.o
 .PHONY : src/Game/Game.cpp.o
 
 src/Game/Game.i: src/Game/Game.cpp.i
@@ -406,7 +406,7 @@ src/Game/Game.i: src/Game/Game.cpp.i
 
 # target to preprocess a source file
 src/Game/Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Game/Game.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Game/Game.cpp.i
 .PHONY : src/Game/Game.cpp.i
 
 src/Game/Game.s: src/Game/Game.cpp.s
@@ -414,7 +414,7 @@ src/Game/Game.s: src/Game/Game.cpp.s
 
 # target to generate assembly for a file
 src/Game/Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Game/Game.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Game/Game.cpp.s
 .PHONY : src/Game/Game.cpp.s
 
 src/Resolution/Resolution.o: src/Resolution/Resolution.cpp.o
@@ -422,7 +422,7 @@ src/Resolution/Resolution.o: src/Resolution/Resolution.cpp.o
 
 # target to build an object file
 src/Resolution/Resolution.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Resolution/Resolution.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Resolution/Resolution.cpp.o
 .PHONY : src/Resolution/Resolution.cpp.o
 
 src/Resolution/Resolution.i: src/Resolution/Resolution.cpp.i
@@ -430,7 +430,7 @@ src/Resolution/Resolution.i: src/Resolution/Resolution.cpp.i
 
 # target to preprocess a source file
 src/Resolution/Resolution.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Resolution/Resolution.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Resolution/Resolution.cpp.i
 .PHONY : src/Resolution/Resolution.cpp.i
 
 src/Resolution/Resolution.s: src/Resolution/Resolution.cpp.s
@@ -438,7 +438,7 @@ src/Resolution/Resolution.s: src/Resolution/Resolution.cpp.s
 
 # target to generate assembly for a file
 src/Resolution/Resolution.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/Resolution/Resolution.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/Resolution/Resolution.cpp.s
 .PHONY : src/Resolution/Resolution.cpp.s
 
 src/bulletHell.o: src/bulletHell.cpp.o
@@ -446,7 +446,7 @@ src/bulletHell.o: src/bulletHell.cpp.o
 
 # target to build an object file
 src/bulletHell.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/bulletHell.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/bulletHell.cpp.o
 .PHONY : src/bulletHell.cpp.o
 
 src/bulletHell.i: src/bulletHell.cpp.i
@@ -454,7 +454,7 @@ src/bulletHell.i: src/bulletHell.cpp.i
 
 # target to preprocess a source file
 src/bulletHell.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/bulletHell.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/bulletHell.cpp.i
 .PHONY : src/bulletHell.cpp.i
 
 src/bulletHell.s: src/bulletHell.cpp.s
@@ -462,7 +462,7 @@ src/bulletHell.s: src/bulletHell.cpp.s
 
 # target to generate assembly for a file
 src/bulletHell.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/bulletHell.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/bulletHell.cpp.s
 .PHONY : src/bulletHell.cpp.s
 
 src/helperFunctions/helperFunctions.o: src/helperFunctions/helperFunctions.cpp.o
@@ -470,7 +470,7 @@ src/helperFunctions/helperFunctions.o: src/helperFunctions/helperFunctions.cpp.o
 
 # target to build an object file
 src/helperFunctions/helperFunctions.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/helperFunctions/helperFunctions.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/helperFunctions/helperFunctions.cpp.o
 .PHONY : src/helperFunctions/helperFunctions.cpp.o
 
 src/helperFunctions/helperFunctions.i: src/helperFunctions/helperFunctions.cpp.i
@@ -478,7 +478,7 @@ src/helperFunctions/helperFunctions.i: src/helperFunctions/helperFunctions.cpp.i
 
 # target to preprocess a source file
 src/helperFunctions/helperFunctions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/helperFunctions/helperFunctions.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/helperFunctions/helperFunctions.cpp.i
 .PHONY : src/helperFunctions/helperFunctions.cpp.i
 
 src/helperFunctions/helperFunctions.s: src/helperFunctions/helperFunctions.cpp.s
@@ -486,7 +486,7 @@ src/helperFunctions/helperFunctions.s: src/helperFunctions/helperFunctions.cpp.s
 
 # target to generate assembly for a file
 src/helperFunctions/helperFunctions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bulletHell.dir/build.make CMakeFiles/bulletHell.dir/src/helperFunctions/helperFunctions.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/valeriePecrage.dir/build.make CMakeFiles/valeriePecrage.dir/src/helperFunctions/helperFunctions.cpp.s
 .PHONY : src/helperFunctions/helperFunctions.cpp.s
 
 # Help Target
@@ -497,7 +497,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... bulletHell"
+	@echo "... valeriePecrage"
 	@echo "... extlibs/Collision/Collision.o"
 	@echo "... extlibs/Collision/Collision.i"
 	@echo "... extlibs/Collision/Collision.s"

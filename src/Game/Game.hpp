@@ -21,7 +21,7 @@
 #include "../Difficulty/Difficulty.hpp" //Namespace for difficulty enum and related helper functions
 
 class Game{
-        public:
+    public:
         Game(Resolution::Setting res, Difficulty::Level difficulty, bool vsync);
         void run();
 

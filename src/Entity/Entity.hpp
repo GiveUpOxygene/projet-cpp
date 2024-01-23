@@ -8,7 +8,7 @@
 #include "../helperFunctions/helperFunctions.hpp"
 #include "../Animation/Animation.hpp"
 
-enum class EntityTypes{small, base_type, pecresse, cyclistGenerator, bonusGenerator};
+enum class EntityTypes{small, base_type, pecresse, cyclistGenerator, bonusGenerator, tourist};
 
 class Entity : public Animation, public BusWriter{
     public:
@@ -47,7 +47,7 @@ class Entity : public Animation, public BusWriter{
         std::string teamToString(Team t){return(t==(Team::ally)?"ally":"enemy");};
         std::string entityToString();
 
-        private:
+    private:
         Team _team;
         float scaleMultiplier = 1;
         EntityTypes entityType;
@@ -64,6 +64,7 @@ class Entity : public Animation, public BusWriter{
         void initPecresse();
         void initCyclistGenerator();
         void initBonusGenerator();
+        void initTourist();
         void initEntityType(EntityTypes type);
         bool dead = false;
         int health = 20;
