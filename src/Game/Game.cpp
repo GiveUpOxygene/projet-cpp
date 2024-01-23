@@ -115,6 +115,7 @@ void Game::doActions(){
     //Player bullets - enemy entitys
     //For each bullet
     for(auto i = playerBullets.begin(); i != playerBullets.end(); i++){
+        // OPTIMISER ? 
         //For each enemy
         for(Entity &enemy : enemies){
             //If enemy is hit by bullet, decrease health and remove bullet
@@ -131,6 +132,7 @@ void Game::doActions(){
         }
     }
 
+    // A MODIFIER : type de bullets = vélo, piéton, ticket 
     //Enemy bullets - player entity
     if(player->isDead() == false){
         for(auto i = enemyBullets.begin(); i != enemyBullets.end(); i++){
@@ -146,7 +148,7 @@ void Game::doActions(){
         }
     }
 
-
+    // A MODIFIER
     //If current wave has been destroyed, increase enemy count and spawn a new wave
     if(enemies.size() == 0){
         enemyCount++;
@@ -238,6 +240,7 @@ void Game::render(){
     for(sf::Sprite bullet : playerBullets)
         window.draw(bullet);
 
+    // A MODIFIER
     //Draw enemy bullets
     for(sf::Sprite bullet : enemyBullets)
         window.draw(bullet);
@@ -250,6 +253,7 @@ void Game::render(){
     for(Entity &enemy : enemies)
         enemy.drawAnimation(window);
 
+    // EST-CE QU'ON GARDE ??? 
     //Draw explosion effects
     for(Effect &explosion : explosions)
         explosion.drawNext(window);
@@ -258,6 +262,7 @@ void Game::render(){
     for(sf::Sprite life : lives)
         window.draw(life);
 
+    // A MODIFIER
     //If player is dead, draw text on top of everything else
     if(player->isDead()){
         window.draw(composerName);
@@ -464,15 +469,18 @@ audioManager{bus}
     //background texture
     bgTexture.loadFromFile("./assets/textures/background.jpg");
 
+    // A MODIFIER
     //bullet textures
     allyBulletTexture.loadFromFile("./assets/textures/ally/bullet.bmp");
     enemyBulletTexture.loadFromFile("./assets/textures/enemy/bullet.bmp");
     cyclistTexture.loadFromFile("./assets/textures/enemy/cyclist.bmp");
     metroTicketTexture.loadFromFile("./assets/textures/enemy/metro.bmp");
 
+    // USELESS
     //ally base_type textures
     Helpers::loadTextures(allyBaseTypeTextures, "./assets/textures/ally/base_type_$d.png");
 
+    // USELESS
     //ally small textures
     Helpers::loadTextures(allyMosquitoTextures, "./assets/textures/ally/small_$d.png");
 
@@ -482,9 +490,11 @@ audioManager{bus}
     //player life texture
     playerLife.loadFromFile("./assets/textures/ally/life.png");
 
+    // USELESS
     //enemy small textures
     Helpers::loadTextures(enemyMosquitoTextures, "./assets/textures/enemy/small_$d.png");
 
+    // USELESS
     //enemy base_type textures
     Helpers::loadTextures(enemyBaseTypeTextures, "./assets/textures/enemy/base_type_$d.png");
 
@@ -586,6 +596,7 @@ bool Game::loadHighScores(){
 }
 
 
+// A MODIFIER
 void Game::setDifficulty(Difficulty::Level diff){
     difficulty = diff;
     std::cout << "Difficulty set to ";
@@ -815,7 +826,7 @@ void Game::initText(){
     authorSurname.setPosition(screen_w - textRect.width - 10, screen_h - textRect.height - 10);
 }
 
-
+// A MODIFIER 
 void Game::spawnEnemies(){
     // Spawn as many enemies as enemyCount
     for(int i = 0; i < enemyCount; i++){
@@ -829,10 +840,10 @@ void Game::spawnEnemies(){
             );
         
 
-        //20% chance for the enemy to be an base_type
+        //20% chance for the enemy to be a tourist
         else if(randNum < 90)
             enemies.push_back(
-                Entity{bus, EntityTypes::base_type, Entity::Team::enemy, (float)screen_w / 800, enemyBaseTypeTextures, enemyBulletTexture}
+                Entity{bus, EntityTypes::tourist, Entity::Team::enemy, (float)screen_w / 800, enemyBaseTypeTextures, enemyBulletTexture}
             );
         
 
