@@ -99,7 +99,7 @@ void Game::doActions(){
         
         for(Entity &enemy : enemies){
             //1% chance of shooting each frame
-            if(rand() % 100 == 0){
+            if(rand() % 100 == 0 && enemy.getEntityType() != EntityTypes::tourist){
                 //At least 500ms will pass before next bullet is shot
                 std::vector<sf::Sprite> shots = enemy.shoot();
 
@@ -146,6 +146,17 @@ void Game::doActions(){
                 i--;
             }
         }
+        // for(auto i = enemies.begin(); i != enemies.end(); i++){
+
+        //     //First check if the rectangles intersect, then check if bullet hits one of the hitboxes
+        //     if(player->isHitBy(*i)){
+        //         player->damage(1);
+        //         player->flash(sf::Color::Red, 35);    //flash player red for 30ms
+        //         i = enemies.erase(i);
+        //         lives.pop_back();
+        //         i--;
+        //     }
+        // }
     }
 
     // A MODIFIER
@@ -486,6 +497,9 @@ audioManager{bus}
 
     //ally pecresse textures
     Helpers::loadTextures(allyPecresseTextures, "./assets/textures/ally/pecresse_$d.png");
+
+    // enemy tourist textures
+    Helpers::loadTextures(enemyTouristTextures, "./assets/textures/enemy/tourist_$d.png");
 
     //player life texture
     playerLife.loadFromFile("./assets/textures/ally/life.png");
@@ -833,7 +847,7 @@ void Game::spawnEnemies(){
         int randNum = rand() % 100;
 
         //70% chance for the enemy to be a small
-        if(randNum < 70)
+        if(randNum < 0)
             enemies.push_back(
                 //Entity{bus, EntityTypes::small, Entity::Team::enemy, (float)screen_w / 800, enemyMosquitoTextures, enemyBulletTexture}
                 Entity{bus, EntityTypes::cyclistGenerator, Entity::Team::enemy, (float)screen_w / 800, cyclistGeneratorTextures, cyclistTexture}
@@ -841,9 +855,9 @@ void Game::spawnEnemies(){
         
 
         //20% chance for the enemy to be a tourist
-        else if(randNum < 90)
+        else if(randNum < 100)
             enemies.push_back(
-                Entity{bus, EntityTypes::tourist, Entity::Team::enemy, (float)screen_w / 800, enemyBaseTypeTextures, enemyBulletTexture}
+                Entity{bus, EntityTypes::tourist, Entity::Team::enemy, (float)screen_w / 800, enemyTouristTextures, enemyBulletTexture}
             );
         
 

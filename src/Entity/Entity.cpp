@@ -209,15 +209,15 @@ void Entity::initPecresse(){
 }
 
 void Entity::initTourist(){
-    addShootingPoint(180, 200);
-    addShootingPoint(253, 125);
-    addShootingPoint(324, 202);
+    // addShootingPoint(180, 200);
+    // addShootingPoint(253, 125);
+    // addShootingPoint(324, 202);
 
     setMsBetweenFrames(30);
     setMsBetweenShots(70);
     dmg = 1;
 
-    setScale(0.18 * scaleMultiplier, 0.18 * scaleMultiplier);
+    setScale(0.1 * scaleMultiplier, 0.1 * scaleMultiplier);
     setBulletScale(0.1 * scaleMultiplier, 0.1 * scaleMultiplier);
     entityType = EntityTypes::tourist;
     health = 30;

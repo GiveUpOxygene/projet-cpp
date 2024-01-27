@@ -23,7 +23,7 @@ int main(int argc, char **argv){
 
    //Game init
     Game game{gameRes, difficulty, vsync};
-
+    printf("Pouet \n");
     //Game loop
     game.run();
 
