@@ -46,6 +46,7 @@ class Entity : public Animation, public BusWriter{
         void onDeath();
         std::string teamToString(Team t){return(t==(Team::ally)?"ally":"enemy");};
         std::string entityToString();
+        float getScaleMultiplier(){return scaleMultiplier;};
 
     private:
         Team _team;
@@ -118,3 +119,4 @@ void Entity::switchEntityType(EntityTypes type, std::array<sf::Texture, SIZE> &t
     //Move so we're centeenemy on the old center
     this->setPos(newEntityRect.left + (oldCenter.x - newCenter.x), newEntityRect.top + (oldCenter.y - newCenter.y));
 }
+

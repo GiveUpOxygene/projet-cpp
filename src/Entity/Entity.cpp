@@ -106,7 +106,6 @@ void Entity::flipVertically(){
 
 void Entity::setScale(float scale_x, float scale_y){
     Animation::setScale(scale_x, scale_y);
-
     //In addition to the setScale provided by Animation,
     //scale shooting points as well
 
@@ -225,15 +224,17 @@ void Entity::initTourist(){
 
 
 void Entity::initBaseType(){
-    setMsBetweenFrames(40);
+    setMsBetweenFrames(100);
     setMsBetweenShots(80);
     dmg = 1;
 
     //Adding shooting points inside the original texture
-    addShootingPoint(70, 200);
-    addShootingPoint(380, 200);
+    addShootingPoint(310, 0);
 
-    setScale(0.14 * scaleMultiplier, 0.14 * scaleMultiplier);
+
+    // addShootingPoint(380, 200);
+
+    setScale(0.3 * scaleMultiplier, 0.3 * scaleMultiplier);
     setBulletScale(0.45 * scaleMultiplier, 0.45 * scaleMultiplier);
     entityType = EntityTypes::base_type;
     health = 20;
@@ -286,6 +287,7 @@ std::string Entity::entityToString(){
 
     case EntityTypes::tourist:
         return ("tourist");
+        
     case EntityTypes::base_type:
     default:
         return ("base_type");

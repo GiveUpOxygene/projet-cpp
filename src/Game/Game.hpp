@@ -55,6 +55,13 @@ class Game{
         sf::Texture metroTicketTexture;
         sf::Texture playerLife;
 
+        // Player Textures
+        std::array<sf::Texture, 4> playerUpTextures;
+        std::array<sf::Texture, 4> playerDownTextures;
+        std::array<sf::Texture, 4> playerLeftTextures;
+        std::array<sf::Texture, 4> playerRightTextures;
+
+
         std::array<sf::Texture, 2> allyMosquitoTextures;
         std::array<sf::Texture, 3> allyBaseTypeTextures;
         std::array<sf::Texture, 4> allyPecresseTextures;

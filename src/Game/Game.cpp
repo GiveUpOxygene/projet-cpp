@@ -247,7 +247,20 @@ void Game::render(){
 
     //Draw player if alive
     if(player->isDead() == false)
+    {
+        if (moveUp) 
+            player->switchTextures(playerUpTextures);
+        else if (moveLeft) 
+            player->switchTextures(playerLeftTextures);
+        else if (moveRight) 
+            player->switchTextures(playerRightTextures);
+        else if (moveDown) 
+            player->switchTextures(playerDownTextures);
+        float scale = player->getScaleMultiplier();
+        player->setScale(0.3 * scale, 0.3 * scale);
         player->drawAnimation(window);
+
+    }
 
     //Draw enemies
     for(Entity &enemy : enemies)
@@ -513,6 +526,11 @@ audioManager{bus}
     //Blue explosion
     Helpers::loadTextures(allyExplosionTextures, "./assets/textures/ally/explosion_$d.png");
 
+    // Player Textures
+    Helpers::loadTextures(playerUpTextures, "./assets/textures/ally/player_up_$d.png");
+    Helpers::loadTextures(playerDownTextures, "./assets/textures/ally/player_down_$d.png");
+    Helpers::loadTextures(playerLeftTextures, "./assets/textures/ally/player_left_$d.png");
+    Helpers::loadTextures(playerRightTextures, "./assets/textures/ally/player_right_$d.png");
 
     //Game Objects init
     std::cout << "Creating game objects..." << std::endl;
@@ -537,7 +555,7 @@ audioManager{bus}
 
     //Creating it
     sf::VideoMode videomode{screen_w, screen_h};
-    window.create(videomode, "Bullet Hell", sf::Style::Titlebar | sf::Style::Close);
+    window.create(videomode, "Valerie Pecrage", sf::Style::Titlebar | sf::Style::Close);
 
     //Centering it
     window.setPosition(windowPos);
@@ -641,7 +659,7 @@ void Game::setRes(Resolution::Setting res){
 void Game::initPlayer(){
     //Constructor with entity and bullet textures
     player = std::unique_ptr<Entity>
-    (new Entity(bus, EntityTypes::base_type, Entity::Team::ally, (float)screen_w / 800,allyBaseTypeTextures, allyBulletTexture));
+    (new Entity(bus, EntityTypes::base_type, Entity::Team::ally, (float)screen_w / 800,playerUpTextures, allyBulletTexture));
 
     //Setting position
     sf::FloatRect playerRect = player->getRect();
