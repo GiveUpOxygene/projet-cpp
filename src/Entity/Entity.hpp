@@ -47,6 +47,8 @@ class Entity : public Animation, public BusWriter{
         std::string teamToString(Team t){return(t==(Team::ally)?"ally":"enemy");};
         std::string entityToString();
         float getScaleMultiplier(){return scaleMultiplier;};
+        // get shooting points
+        std::vector<sf::Vector2f> getShootingPoints(){return shootingPoints;};
 
     private:
         Team _team;

@@ -224,18 +224,19 @@ void Entity::initTourist(){
 
 
 void Entity::initBaseType(){
+    addShootingPoint(100, 25);
+
+
     setMsBetweenFrames(100);
-    setMsBetweenShots(80);
+    setMsBetweenShots(100);
     dmg = 1;
 
     //Adding shooting points inside the original texture
-    addShootingPoint(310, 0);
-
 
     // addShootingPoint(380, 200);
 
     setScale(0.3 * scaleMultiplier, 0.3 * scaleMultiplier);
-    setBulletScale(0.45 * scaleMultiplier, 0.45 * scaleMultiplier);
+    setBulletScale(0.4 * scaleMultiplier, 0.4 * scaleMultiplier);
     entityType = EntityTypes::base_type;
     health = 20;
 }

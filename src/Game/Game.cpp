@@ -8,6 +8,8 @@ void Game::run(){
     sf::Clock clock;
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
 
+    // print shooting points of player
+
     playTimeClock.restart();
     while(running){
         handleInput();
@@ -248,6 +250,9 @@ void Game::render(){
     //Draw player if alive
     if(player->isDead() == false)
     {
+        // player scale 
+        sf::Vector2f playerScale = player->getScale();
+
         if (moveUp) 
             player->switchTextures(playerUpTextures);
         else if (moveLeft) 
@@ -256,8 +261,10 @@ void Game::render(){
             player->switchTextures(playerRightTextures);
         else if (moveDown) 
             player->switchTextures(playerDownTextures);
-        float scale = player->getScaleMultiplier();
-        player->setScale(0.3 * scale, 0.3 * scale);
+        else {
+            player->switchTextures(playerUpTextures);
+        }
+        player->setScale(playerScale.x, playerScale.y);
         player->drawAnimation(window);
 
     }
@@ -334,23 +341,23 @@ void Game::handleInput(){
                 break;
 
                 //Entity change 1
-                case sf::Keyboard::Num1:
-                case sf::Keyboard::Num8:
-                player->switchEntityType(EntityTypes::base_type, allyBaseTypeTextures);
-                break;
+                // case sf::Keyboard::Num1:
+                // case sf::Keyboard::Num8:
+                // player->switchEntityType(EntityTypes::base_type, allyBaseTypeTextures);
+                // break;
 
                 //Entity change 2
-                case sf::Keyboard::Num2:
-                case sf::Keyboard::Num9:
-                player->switchEntityType(EntityTypes::small, allyMosquitoTextures);
-                break;
+                // case sf::Keyboard::Num2:
+                // case sf::Keyboard::Num9:
+                // player->switchEntityType(EntityTypes::small, allyMosquitoTextures);
+                // break;
 
                 //Entity change 3
-                case sf::Keyboard::Num3:
-                case sf::Keyboard::Num0:
-                case sf::Keyboard::U:
-                player->switchEntityType(EntityTypes::pecresse, allyPecresseTextures);
-                break;
+                // case sf::Keyboard::Num3:
+                // case sf::Keyboard::Num0:
+                // case sf::Keyboard::U:
+                // player->switchEntityType(EntityTypes::pecresse, allyPecresseTextures);
+                // break;
 
                 //Fire
                 case sf::Keyboard::Space:
@@ -484,7 +491,7 @@ audioManager{bus}
 
     // A MODIFIER
     //bullet textures
-    allyBulletTexture.loadFromFile("./assets/textures/ally/bullet.bmp");
+    allyBulletTexture.loadFromFile("./assets/textures/ally/bullet.png");
     enemyBulletTexture.loadFromFile("./assets/textures/enemy/bullet.bmp");
     cyclistTexture.loadFromFile("./assets/textures/enemy/cyclist.bmp");
     metroTicketTexture.loadFromFile("./assets/textures/enemy/metro.bmp");
