@@ -8,7 +8,7 @@
 #include "../helperFunctions/helperFunctions.hpp"
 #include "../Animation/Animation.hpp"
 
-enum class EntityTypes{small, base_type, pecresse, cyclistGenerator, bonusGenerator, tourist};
+enum class EntityTypes{small, base_type, player, pecrage, cyclistGenerator, tourist};
 
 class Entity : public Animation, public BusWriter{
     public:
@@ -64,9 +64,9 @@ class Entity : public Animation, public BusWriter{
 
         void initMosquito();
         void initBaseType();
-        void initPecresse();
+        void initPlayer();
+        void initpecrage();
         void initCyclistGenerator();
-        void initBonusGenerator();
         void initTourist();
         void initEntityType(EntityTypes type);
         bool dead = false;

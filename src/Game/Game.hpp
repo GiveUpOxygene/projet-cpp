@@ -64,14 +64,12 @@ class Game{
 
         std::array<sf::Texture, 2> allyMosquitoTextures;
         std::array<sf::Texture, 3> allyBaseTypeTextures;
-        std::array<sf::Texture, 4> allyPecresseTextures;
+        std::array<sf::Texture, 4> allypecrageTextures;
 
         std::array<sf::Texture, 2> enemyMosquitoTextures;
         std::array<sf::Texture, 3> enemyBaseTypeTextures;
-        std::array<sf::Texture, 4> enemyPecresseTextures;
-        std::array<sf::Texture, 2> cyclistGeneratorTextures;
-        std::array<sf::Texture, 2> bonusGeneratorTextures;
-        
+        std::array<sf::Texture, 4> enemypecrageTextures;
+        std::array<sf::Texture, 2> cyclistGeneratorTextures;        
 
         std::array<sf::Texture, 13> enemyExplosionTextures;
         std::array<sf::Texture, 13> allyExplosionTextures;
@@ -115,7 +113,7 @@ class Game{
         float playerSpeed = 420;
         float enemyMosquitoSpeed = 210;
         float enemyBaseTypeSpeed = 150;
-        float enemyPecresseSpeed = 90;
+        float enemypecrageSpeed = 90;
         float playerBulletSpeed = 600;
         float enemyBulletSpeed = 240;
         float enemyCyclistGeneratorSpeed = 90;
