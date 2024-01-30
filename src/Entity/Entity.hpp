@@ -8,7 +8,7 @@
 #include "../helperFunctions/helperFunctions.hpp"
 #include "../Animation/Animation.hpp"
 
-enum class EntityTypes{small, base_type, pecresse, cyclistGenerator, bonusGenerator, tourist};
+enum class EntityTypes{small, base_type, player, pecrage, cyclistGenerator, tourist};
 
 class Entity : public Animation, public BusWriter{
     public:
@@ -46,6 +46,9 @@ class Entity : public Animation, public BusWriter{
         void onDeath();
         std::string teamToString(Team t){return(t==(Team::ally)?"ally":"enemy");};
         std::string entityToString();
+        float getScaleMultiplier(){return scaleMultiplier;};
+        // get shooting points
+        std::vector<sf::Vector2f> getShootingPoints(){return shootingPoints;};
 
     private:
         Team _team;
@@ -61,9 +64,9 @@ class Entity : public Animation, public BusWriter{
 
         void initMosquito();
         void initBaseType();
-        void initPecresse();
+        void initPlayer();
+        void initpecrage();
         void initCyclistGenerator();
-        void initBonusGenerator();
         void initTourist();
         void initEntityType(EntityTypes type);
         bool dead = false;
@@ -118,3 +121,4 @@ void Entity::switchEntityType(EntityTypes type, std::array<sf::Texture, SIZE> &t
     //Move so we're centeenemy on the old center
     this->setPos(newEntityRect.left + (oldCenter.x - newCenter.x), newEntityRect.top + (oldCenter.y - newCenter.y));
 }
+
