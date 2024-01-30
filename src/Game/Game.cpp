@@ -57,8 +57,8 @@ void Game::doMovement(){
             speed = enemyBaseTypeSpeed;
             break;
 
-            case EntityTypes::pecresse:
-            speed = enemyPecresseSpeed;
+            case EntityTypes::pecrage:
+            speed = enemypecrageSpeed;
             break;
 
             /* case EntityTypes::cyclistGenerator:
@@ -192,12 +192,6 @@ void Game::destroyObjects(){
             explosions.back().setPos(enemyPos.x, enemyPos.y);
             explosions.back().setMsBetweenFrames(20);
             explosions.back().play();
-
-            srand(std::time(NULL));
-            if (i->getEntityType()==EntityTypes::small && rand() % 100>70){
-                i->switchEntityType(EntityTypes::bonusGenerator, bonusGeneratorTextures);
-                i->resurrect();
-            }
 
             //removing entity object from vector
             i = enemies.erase(i);
@@ -333,24 +327,6 @@ void Game::handleInput(){
                 playerSpeed /= 1.5;
                 break;
 
-                //Entity change 1
-                case sf::Keyboard::Num1:
-                case sf::Keyboard::Num8:
-                player->switchEntityType(EntityTypes::base_type, allyBaseTypeTextures);
-                break;
-
-                //Entity change 2
-                case sf::Keyboard::Num2:
-                case sf::Keyboard::Num9:
-                player->switchEntityType(EntityTypes::small, allyMosquitoTextures);
-                break;
-
-                //Entity change 3
-                case sf::Keyboard::Num3:
-                case sf::Keyboard::Num0:
-                case sf::Keyboard::U:
-                player->switchEntityType(EntityTypes::pecresse, allyPecresseTextures);
-                break;
 
                 //Fire
                 case sf::Keyboard::Space:
@@ -484,7 +460,7 @@ audioManager{bus}
 
     // A MODIFIER
     //bullet textures
-    allyBulletTexture.loadFromFile("./assets/textures/ally/bullet.bmp");
+    allyBulletTexture.loadFromFile("./assets/textures/ally/baguette.bmp");
     enemyBulletTexture.loadFromFile("./assets/textures/enemy/bullet.bmp");
     cyclistTexture.loadFromFile("./assets/textures/enemy/cyclist.bmp");
     metroTicketTexture.loadFromFile("./assets/textures/enemy/metro.bmp");
@@ -497,8 +473,8 @@ audioManager{bus}
     //ally small textures
     Helpers::loadTextures(allyMosquitoTextures, "./assets/textures/ally/small_$d.png");
 
-    //ally pecresse textures
-    Helpers::loadTextures(allyPecresseTextures, "./assets/textures/ally/pecresse_$d.png");
+    //ally pecrage textures
+    Helpers::loadTextures(allypecrageTextures, "./assets/textures/ally/pecrage_$d.png");
 
     //player life texture
     playerLife.loadFromFile("./assets/textures/ally/life.png");
@@ -512,13 +488,10 @@ audioManager{bus}
     Helpers::loadTextures(enemyBaseTypeTextures, "./assets/textures/enemy/base_type_$d.png");
 
     //enemy base_type textures
-    Helpers::loadTextures(enemyPecresseTextures, "./assets/textures/enemy/pecresse_$d.png");
+    Helpers::loadTextures(enemypecrageTextures, "./assets/textures/enemy/pecrage_$d.png");
 
     //cyclistGenerator textures
     Helpers::loadTextures(cyclistGeneratorTextures, "./assets/textures/enemy/generator_$d.png");
-
-    //bonusGnerator textures
-    Helpers::loadTextures(bonusGeneratorTextures, "./assets/textures/enemy/bonusGenerator_$d.png");
 
     //Red explosion textures
     Helpers::loadTextures(enemyExplosionTextures, "./assets/textures/enemy/explosion_$d.png");
@@ -648,7 +621,7 @@ void Game::setRes(Resolution::Setting res){
     playerSpeed *= factor;
     enemyMosquitoSpeed *= factor;
     enemyBaseTypeSpeed *= factor;
-    enemyPecresseSpeed *= factor;
+    enemypecrageSpeed *= factor;
     playerBulletSpeed *= factor;
     enemyBulletSpeed *= factor;
     lifeScale *= factor;
@@ -659,7 +632,7 @@ void Game::setRes(Resolution::Setting res){
 void Game::initPlayer(){
     //Constructor with entity and bullet textures
     player = std::unique_ptr<Entity>
-    (new Entity(bus, EntityTypes::base_type, Entity::Team::ally, (float)screen_w / 800,playerUpTextures, allyBulletTexture));
+    (new Entity(bus, EntityTypes::player, Entity::Team::ally, (float)screen_w / 800,playerUpTextures, allyBulletTexture));
 
     //Setting position
     sf::FloatRect playerRect = player->getRect();
@@ -865,10 +838,10 @@ void Game::spawnEnemies(){
             );
         
 
-        //10% chance for the enemy to be a pecresse
+        //10% chance for the enemy to be a pecrage
         else
             enemies.push_back(
-                Entity{bus, EntityTypes::pecresse, Entity::Team::enemy, (float)screen_w / 800, enemyPecresseTextures, metroTicketTexture}
+                Entity{bus, EntityTypes::pecrage, Entity::Team::enemy, (float)screen_w / 800, enemypecrageTextures, metroTicketTexture}
             );
         
 
@@ -878,7 +851,7 @@ void Game::spawnEnemies(){
         enemies.back().setPos(x, y);
 
         //Flip Vertically so enemy faces the player
-        if(enemies.back().getEntityType() != EntityTypes::cyclistGenerator){
+        if(enemies.back().getEntityType() != EntityTypes::cyclistGenerator && enemies.back().getEntityType() != EntityTypes::pecrage){
             enemies.back().flipVertically();
         }
 

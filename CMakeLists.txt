@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.9)
-project(BulletHell)
+project(valeriePecrage)
 
 #C++11 Standard
 set(CMAKE_CXX_STANDARD 11)

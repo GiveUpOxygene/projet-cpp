@@ -69,21 +69,22 @@ void Entity::initEntityType(EntityTypes type){
         initBaseType();
         break;
 
+        case EntityTypes::player:
+        initPlayer();
+        break;
+
         case EntityTypes::small:
         initMosquito();
         break;
 
-        case EntityTypes::pecresse:
-        initPecresse();
+        case EntityTypes::pecrage:
+        initpecrage();
         break;
 
         case EntityTypes::cyclistGenerator:
         initCyclistGenerator();
         break;
 
-        case EntityTypes::bonusGenerator:
-        initBonusGenerator();
-        break;
         case EntityTypes::tourist:
         initTourist();
         break; 
@@ -192,19 +193,19 @@ void Entity::initMosquito(){
 }
 
 
-void Entity::initPecresse(){
-    addShootingPoint(180, 200);
+void Entity::initpecrage(){
+    //addShootingPoint(180, 200);
     addShootingPoint(253, 125);
-    addShootingPoint(324, 202);
+    //addShootingPoint(324, 202);
 
-    setMsBetweenFrames(30);
-    setMsBetweenShots(70);
+    setMsBetweenFrames(20);
+    setMsBetweenShots(80);
     dmg = 1;
 
     setScale(0.18 * scaleMultiplier, 0.18 * scaleMultiplier);
     setBulletScale(0.1 * scaleMultiplier, 0.1 * scaleMultiplier);
-    entityType = EntityTypes::pecresse;
-    health = 30;
+    entityType = EntityTypes::pecrage;
+    health = 15;
 }
 
 void Entity::initTourist(){
@@ -219,7 +220,7 @@ void Entity::initTourist(){
     setScale(0.18 * scaleMultiplier, 0.18 * scaleMultiplier);
     setBulletScale(0.1 * scaleMultiplier, 0.1 * scaleMultiplier);
     entityType = EntityTypes::tourist;
-    health = 30;
+    health = 4;
 }
 
 
@@ -233,10 +234,22 @@ void Entity::initBaseType(){
 
 
     // addShootingPoint(380, 200);
-
-    setScale(0.3 * scaleMultiplier, 0.3 * scaleMultiplier);
+    setScale(0.3*scaleMultiplier, 0.3*scaleMultiplier);
     setBulletScale(0.45 * scaleMultiplier, 0.45 * scaleMultiplier);
     entityType = EntityTypes::base_type;
+    health = 20;
+}
+
+void Entity::initPlayer(){
+    setMsBetweenFrames(100);
+    setMsBetweenShots(200);
+    dmg = 1;
+
+    //Adding shooting points inside the original texture
+    addShootingPoint(310, 0);
+    setScale(0.3*scaleMultiplier, 0.3*scaleMultiplier);
+    setBulletScale(0.01 * scaleMultiplier, 0.01 * scaleMultiplier);
+    entityType = EntityTypes::player;
     health = 20;
 }
 
@@ -251,17 +264,6 @@ void Entity::initCyclistGenerator(){
     health = 20;
 }
 
-void Entity::initBonusGenerator(){
-    setMsBetweenFrames(40);
-    setMsBetweenShots(100);
-    dmg=1;
-    addShootingPoint(225, 200);
-    setScale(0.14 * scaleMultiplier, 0.14 * scaleMultiplier);
-    setBulletScale(0.3 * scaleMultiplier, 0.3 * scaleMultiplier);
-    entityType = EntityTypes::bonusGenerator;
-    health = 20;
-}
-
 void Entity::onDeath(){
     std::cout << "équipe : " << teamToString(_team) << ", type : " << entityToString() << std::endl;
 }
@@ -273,8 +275,8 @@ void Entity::resurrect(){
 std::string Entity::entityToString(){
     switch (getEntityType())
     {
-    case EntityTypes::pecresse:
-        return ("pecresse");
+    case EntityTypes::pecrage:
+        return ("pecrage");
 
     case EntityTypes::small:
         return ("small");
@@ -282,9 +284,6 @@ std::string Entity::entityToString(){
     case EntityTypes::cyclistGenerator:
         return ("cyclistGenerator");
     
-    case EntityTypes::bonusGenerator:
-        return ("bonusGenerator");
-
     case EntityTypes::tourist:
         return ("tourist");
         
