@@ -117,7 +117,6 @@ void Game::doActions(){
     //Player bullets - enemy entitys
     //For each bullet
     for(auto i = playerBullets.begin(); i != playerBullets.end(); i++){
-        // OPTIMISER ? 
         //For each enemy
         for(Entity &enemy : enemies){
             //If enemy is hit by bullet, decrease health and remove bullet
@@ -830,7 +829,7 @@ void Game::spawnEnemies(){
     for(int i = 0; i < enemyCount; i++){
         int randNum = rand() % 100;
 
-        //70% chance for the enemy to be a small
+        //70% chance for the enemy to be a cyclist generator
         if(randNum < 70)
             enemies.push_back(
                 //Entity{bus, EntityTypes::small, Entity::Team::enemy, (float)screen_w / 800, enemyMosquitoTextures, enemyBulletTexture}
@@ -838,7 +837,7 @@ void Game::spawnEnemies(){
             );
         
 
-        //20% chance for the enemy to be a tourist
+        //20% chance for the enemy to be a tourist generator
         else if(randNum < 90)
             enemies.push_back(
                 Entity{bus, EntityTypes::tourist, Entity::Team::enemy, (float)screen_w / 800, enemyBaseTypeTextures, enemyBulletTexture}

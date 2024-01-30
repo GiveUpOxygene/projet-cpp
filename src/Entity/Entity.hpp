@@ -3,6 +3,7 @@
 #include <vector>
 #include <functional>
 #include <string>
+#include <iostream>
 #include "../Bus/Message.hpp"
 #include "../Bus/BusWriter.hpp"
 #include "../helperFunctions/helperFunctions.hpp"
@@ -49,6 +50,15 @@ class Entity : public Animation, public BusWriter{
         float getScaleMultiplier(){return scaleMultiplier;};
         // get shooting points
         std::vector<sf::Vector2f> getShootingPoints(){return shootingPoints;};
+
+        // operator overload 
+        friend std::ostream& operator<<(std::ostream& os, Entity& entity)
+        {
+            os << entity.entityToString() ; 
+            return os; 
+        };
+        
+
 
     private:
         Team _team;
