@@ -62,11 +62,7 @@ class Game{
         std::array<sf::Texture, 4> playerRightTextures;
 
 
-        std::array<sf::Texture, 2> allyMosquitoTextures;
-        std::array<sf::Texture, 3> allyBaseTypeTextures;
-        std::array<sf::Texture, 4> allypecrageTextures;
 
-        std::array<sf::Texture, 2> enemyMosquitoTextures;
         std::array<sf::Texture, 3> enemyBaseTypeTextures;
         std::array<sf::Texture, 4> enemypecrageTextures;
         std::array<sf::Texture, 2> cyclistGeneratorTextures;        
