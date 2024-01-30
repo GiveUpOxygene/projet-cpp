@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/nicos/OneDrive/Bureau/MAIN4/S7 - C++ POO/projet-cpp
+# Install script for directory: /home/user/S7 info/cpp/projet-cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/nicos/OneDrive/Bureau/MAIN4/S7 - C++ POO/projet-cpp/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/user/S7 info/cpp/projet-cpp/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

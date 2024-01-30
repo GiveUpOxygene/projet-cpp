@@ -465,34 +465,18 @@ audioManager{bus}
     //background texture
     bgTexture.loadFromFile("./assets/textures/background.jpg");
 
-    // A MODIFIER
     //bullet textures
     allyBulletTexture.loadFromFile("./assets/textures/ally/baguette.bmp");
     enemyBulletTexture.loadFromFile("./assets/textures/enemy/bullet.bmp");
     cyclistTexture.loadFromFile("./assets/textures/enemy/cyclist.bmp");
     metroTicketTexture.loadFromFile("./assets/textures/enemy/metro.bmp");
 
-    // USELESS
-    //ally base_type textures
-    Helpers::loadTextures(allyBaseTypeTextures, "./assets/textures/ally/base_type_$d.png");
-
-    // USELESS
-    //ally small textures
-    Helpers::loadTextures(allyMosquitoTextures, "./assets/textures/ally/small_$d.png");
-
-    //ally pecrage textures
-    Helpers::loadTextures(allypecrageTextures, "./assets/textures/ally/pecrage_$d.png");
-
     //player life texture
     playerLife.loadFromFile("./assets/textures/ally/life.png");
 
     // USELESS
-    //enemy small textures
-    Helpers::loadTextures(enemyMosquitoTextures, "./assets/textures/enemy/small_$d.png");
-
-    // USELESS
     //enemy base_type textures
-    Helpers::loadTextures(enemyBaseTypeTextures, "./assets/textures/enemy/base_type_$d.png");
+    Helpers::loadTextures(enemyBaseTypeTextures, "./assets/textures/enemy/tourist_$d.png");
 
     //enemy base_type textures
     Helpers::loadTextures(enemypecrageTextures, "./assets/textures/enemy/pecrage_$d.png");
@@ -857,10 +841,6 @@ void Game::spawnEnemies(){
         int x = rand() % (int)(screen_w - enemies.back().getRect().width);
         enemies.back().setPos(x, y);
 
-        //Flip Vertically so enemy faces the player
-        if(enemies.back().getEntityType() != EntityTypes::cyclistGenerator && enemies.back().getEntityType() != EntityTypes::pecrage){
-            enemies.back().flipVertically();
-        }
 
         //Setting shooting cooldown, overriding the entity type's cooldown
         enemies.back().setMsBetweenShots(500);

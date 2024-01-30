@@ -194,9 +194,9 @@ void Entity::initMosquito(){
 
 
 void Entity::initpecrage(){
-    //addShootingPoint(180, 200);
-    addShootingPoint(253, 125);
-    //addShootingPoint(324, 202);
+    addShootingPoint(180, 100);
+    addShootingPoint(253, 150);
+    addShootingPoint(324, 100);
 
     setMsBetweenFrames(20);
     setMsBetweenShots(80);
@@ -209,11 +209,11 @@ void Entity::initpecrage(){
 }
 
 void Entity::initTourist(){
-    addShootingPoint(180, 200);
-    addShootingPoint(253, 125);
-    addShootingPoint(324, 202);
+    //addShootingPoint(180, 100);
+    //addShootingPoint(253, 150);
+    //addShootingPoint(324, 100);
 
-    setMsBetweenFrames(30);
+    setMsBetweenFrames(20);
     setMsBetweenShots(70);
     dmg = 1;
 
