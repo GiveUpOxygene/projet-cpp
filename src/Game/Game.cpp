@@ -654,11 +654,13 @@ void Game::updateScoreText(){
     sf::Time playTime = playTimeClock.getElapsedTime();
     std::string timeStr = "TIME: " + Helpers::minutesAndSeconds(playTime);
     timeText.setString(timeStr);
+    timeText.setFillColor(sf::Color::Yellow);
 
     //Setting score text
     std::ostringstream text;
     text << "SCORE: " << score;
     scoreText.setString(text.str());
+    scoreText.setFillColor(sf::Color::Blue);
 
     //Setting high score text
     std::ostringstream highText;
@@ -668,6 +670,7 @@ void Game::updateScoreText(){
     }
     else highText << "HIGH SCORE: " << highScore;
     highScoreText.setString(highText.str());
+    highScoreText.setFillColor(sf::Color::Black);
 
 
     //Centering score text
@@ -772,12 +775,12 @@ void Game::initText(){
     difficultyText.setString("DIFFICULTY: " + Helpers::allUpperCase(Difficulty::difficultyToStr(difficulty)));
     difficultyText.setFont(font);
     difficultyText.setCharacterSize((int)(12 * textScale));
-    difficultyText.setFillColor(sf::Color::Red);
+    difficultyText.setFillColor(sf::Color::Green);
     difficultyText.setStyle(sf::Text::Bold);
 
     //Init Name and Surname Text
-    authorName.setString("DANIELE");
-    authorSurname.setString("PUSCEDDU");
+    authorName.setString("Alexandre     Nicolas");
+    authorSurname.setString("CORRIOU     SALVAN");
     authorName.setFont(font);
     authorSurname.setFont(font);
     authorName.setCharacterSize((int)(10 * textScale));
