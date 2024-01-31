@@ -3,7 +3,7 @@ date : 31-01-2024
 ---
 # Projet de C++ : Valerie Pécrage ! 
 
-Ceci est un projet de programmation en C++ dans le cadre de la formation de MAIN4 à Polytech Sorbonne. 
+Ceci est un projet de programmation en C++ dans le cadre de la formation de MAIN4 à Polytech Sorbonne. Toute ressemblance avec des personnes existant ou ayant déjà existé est purement intentionnelle.
 
 ## Synopsis 
 
