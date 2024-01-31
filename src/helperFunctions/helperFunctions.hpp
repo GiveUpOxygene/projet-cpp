@@ -17,7 +17,7 @@ namespace Helpers{
 
         //If $d is missing, return
         if(textNum == std::string::npos){
-            std::cout << "Missing $d\n"; //placeholder, I should throw an exception
+            std::cout << "Missing $d\n"; 
             return;
         }
 
